@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face {
+        font-family: "Franklin";
+        src: url(../Franklin-Gothic-book-normal.woff2) format("woff2");
+    }
+
+
+    body {
+        background-color: rgb(102, 61, 57);
+        font-size: 40px;
+    }
+
+    h1 {
+        color: rgb(55, 40, 37);
+        font-size: 200px;
+        font-family: 'Franklin Gothic Medium';
+        margin: 0;
+        padding: 0;
+
+
+    }
+
+    h2 {
+        color: rgb(55, 40, 37);
+        text-align: left;
+        padding-top: 300px;
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium';
+
+    }
+
+    .parentcontainer {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: .5fr 1fr 3fr 1fr .5fr;
+        grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+
+    }
+
+    .child {
+        /* border: 1px dotted rgb(0, 0, 0); */
+
+
+    }
+
+    #rothkotitle {
+
+        transform: rotate(180deg) translate(-90px);
+        writing-mode: vertical-lr;
+        padding: 0pt;
+        margin: 0pt;
+    
+
+
+    }
+
+    #chillidatitle {
+
+        writing-mode: vertical-rl;
+        transform: translate(-90px);
+
+    }
+
+    .redpart {
+        background-color: rgb(159, 64, 55);
+
+
+
+    }
+</style>
+
+<body>
+
+    <div class="parentcontainer">
+        <div class="child special">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+        <div class="child">10</div>
+        <div class="child " id="rothkotitle">
+            <div>
+                <h1> Rothko </h1>
+            </div>
+        </div>
+        <div class="child redpart">12</div>
+        <div class="child redpart">
+            <h2>III 3. - 8. IV <br> Kunsthalle <br> Basel <br> Mark <br> Rothko <br> Eduardo <br> Chillida</h2>
+        </div>
+        <div class="child redpart">14</div>
+        <div class="child">
+            <h1 id="chillidatitle"> Chillida</h1>
+        </div>
+        <div class="child">16</div>
+        <div class="child">17</div>
+        <div class="child">18</div>
+        <div class="child">19</div>
+        <div class="child">20</div>
+        <div class="child">21</div>
+        <div class="child">22</div>
+        <div class="child">23</div>
+        <div class="child">24</div>
+        <div class="child">25</div>
+    </div>
+
+</body>
+
+</html>

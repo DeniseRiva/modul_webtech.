@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schreibmaschinen-Effekt</title>
+    <style>
+        body {
+            background-color: #222;
+            font-family: 'Courier New', Courier, monospace;
+            color: #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .board {
+            background-color: #333;
+            border: 10px solid #444;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .text {
+            font-size: 2rem;
+            color: #FFEC00;
+            overflow: hidden; /* Versteckt den Text, der noch nicht getippt wurde */
+            border-right: 2px solid #FFEC00; /* Blinker-Effekt */
+            white-space: nowrap; /* Kein Zeilenumbruch */
+            animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        /* Schreibmaschinen-Effekt */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* Blinken des Cursors */
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #FFEC00; }
+        }
+    </style>
+</head>
+<body>
+    <div class="board">
+        <div class="text">16:25 LH297 Stuttgart E16</div>
+    </div>
+</body>
+</html>

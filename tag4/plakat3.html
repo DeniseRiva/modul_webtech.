@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face {
+        font-family: "Franklin";
+        src: url(../Franklin-Gothic-book-normal.woff2) format("woff2");
+    }
+
+
+    body {
+        background-color: rgb(102, 61, 57);
+        font-size: 40px;
+        margin: 0;
+
+    }
+
+
+
+    h1 {
+        color: rgb(55, 40, 37);
+        font-size: 200px;
+        font-family: 'Franklin Gothic Medium';
+        margin: 0;
+        padding: 0;
+
+
+    }
+
+    h2 {
+        color: rgb(55, 40, 37);
+        text-align: left;
+        padding-top: 300px;
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium';
+
+    }
+
+    .parentcontainer {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: .5fr 1fr 3fr 1fr .5fr;
+        grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+
+
+    }
+
+
+
+    #rothkotitle {
+
+
+        transform: rotate(180deg) translate(-90px);
+        writing-mode: vertical-lr;
+        padding: 0pt;
+        margin: 0pt;
+
+
+
+
+    }
+
+    #chillidatitle {
+
+        writing-mode: vertical-rl;
+        transform: translate(-90px);
+
+    }
+
+    .redpart {
+        background-color: rgb(159, 64, 55);
+
+
+
+    }
+
+    @media (max-width: 768px) {
+
+        .parentcontainer {
+            display: grid;
+            height: 100vh;
+            /*  resize: vertical;*/
+            grid-template-columns: 80px 1fr 3fr 1fr 80px;
+            /* grid-template-rows: 1fr 1fr 2fr 1fr 1fr; */
+            grid-template-rows: 50px 100px 1fr 100px 50px;
+
+
+        }
+
+        .rothko {
+            grid-column: 3;
+            grid-row: 2;
+
+
+        }
+
+        #rothkotitle {
+
+            transform: rotate(0deg) translate(0, 50px);
+            writing-mode: horizontal-tb;
+            padding: 0pt;
+            margin: 0pt;
+            text-align: center;
+
+        }
+
+
+        .chillida {
+
+            grid-column: 3/4;
+            grid-row: 4/5;
+
+        }
+
+        #chillidatitle {
+
+            writing-mode: horizontal-tb;
+            transform: translate(0, -50px);
+
+        }
+
+        h2 {
+
+            transform: translate(0, -60px)
+        }
+
+        h1 {
+            font-size: 100px;
+            line-height: 100%;
+
+        }
+
+   }
+</style>
+
+<body>
+
+    <div class="parentcontainer">
+        <div class="child special"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child  rothko darkred" id="rothkotitle">
+            <h1> Rothko </h1>
+        </div>
+        <div class="child redpart"></div>
+        <div class="child redpart">
+            <h2>III 3. - 8. IV <br> Kunsthalle <br> Basel <br> Mark <br> Rothko <br> Eduardo <br> Chillida</h2>
+        </div>
+        <div class="child redpart"></div>
+        <div class="child chillida darkred">
+            <h1 id="chillidatitle"> Chillida</h1>
+        </div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+
+</body>
+
+</html>
