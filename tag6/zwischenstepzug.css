@@ -28,8 +28,11 @@ h2 {
     font-size: 30px;
     font-family: 'Franklin Gothic Medium';
     overflow: hidden;
-    white-space: nowrap;
+    /* Versteckt den Text, der noch nicht getippt wurde */
+   white-space: nowrap;
+    /* Kein Zeilenumbruch */
     width: 0;
+    /* Startbreite bei 0, um die Animation korrekt zu starten */
     animation: typing 1s steps(20, end) forwards, blink-caret 0.75s step-end 1;
     position: relative;
 }
@@ -58,12 +61,14 @@ h2:nth-child(7) {
     animation-delay: 7s;
 }
 
-/* cursor */
 h2::after {
     content: '';
+    /* Cursor-Effekt */
     display: inline-block;
     border-right: 2px solid #56120800;
+    /* Blinker-Effekt */
     height: 30px;
+    /* Höhe des Cursors */
     position: absolute;
     top: 0;
     right: 0;
@@ -77,7 +82,7 @@ h2::after {
     }
 
     to {
-        width: 18%;
+        width: 200px;
     }
 }
 
@@ -118,7 +123,7 @@ h2::after {
 }
 
 .information {
-    transform: translate(0, 300px);
+    transform: translate(0,300px);
 }
 
 @media (max-width: 768px) {
@@ -150,41 +155,68 @@ h2::after {
 
     #chillidatitle {
         writing-mode: horizontal-tb;
-        transform: translate(0, -90px);
+       transform: translate(0, -90px);
+    }
+    .redpart {
+        height: autox;
     }
 
     h2 {
         transform: translate(40px, -80px);
         overflow: hidden;
+        margin: 0;
+        padding: 0;
+        /* Versteckt den Text, der noch nicht getippt wurde */
         white-space: nowrap;
+        /* Kein Zeilenumbruch */
         width: 0;
+        /* Startbreite bei 0, um die Animation korrekt zu starten */
         animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
         position: relative;
+    }
+    .information {
+        transform: translate(0,-900px);
     }
 
     h2::after {
         content: '';
+        /* Cursor-Effekt */
         display: inline-block;
-        border-right: 2px solid #561308;
+        border-right: 2px solid #56120800;
+        /* Blinker-Effekt */
         height: 30px;
+        /* Höhe des Cursors */
         position: absolute;
         top: 0;
         right: 0;
-        animation: blink-caret 0.75s step-end infinite;
+        animation: blink-caret 0.75s step-end 1;
     }
 
     @keyframes typing {
         from {
             width: 0;
         }
-
+    
         to {
-            width: 18%;
+            width: 150px;
         }
-
+   
+   
         h1 {
-            font-size: 100px;
-            line-height: 100%;
-        }
+        font-size: 100px;
+        line-height: 100%;
     }
+}
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-right: 2px solid #56120800;
+    }
+
+    50% {
+        border-right: 2px solid #561208;
+    }
+
+}
 }
