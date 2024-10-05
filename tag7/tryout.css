@@ -6,7 +6,6 @@
 body {
     background-color: rgb(102, 61, 57);
     margin: 0;
-    
 }
 
 h1 {
@@ -31,12 +30,10 @@ h2 {
     white-space: nowrap;
     animation: typing 6s steps(40, end) forwards, blink-caret 0.5s 10 step-end;
     position: relative;
-    
-    
 }
 
-h2:nth-child(2) { 
-    animation-delay: 2s; 
+h2:nth-child(2) {
+    animation-delay: 2s;
 }
 
 h2:nth-child(3) {
@@ -59,6 +56,7 @@ h2:nth-child(7) {
     animation-delay: 7s;
 }
 
+/* cursor */
 h2::after {
     content: '';
     display: inline-block;
@@ -69,6 +67,7 @@ h2::after {
     right: 0;
 }
 
+/* Schreibmaschinen-Effekt */
 @keyframes typing {
     from {
         width: 0;
@@ -79,6 +78,7 @@ h2::after {
     }
 }
 
+/* Blinken des Cursors */
 @keyframes blink-caret {
     from,
     to {
@@ -107,38 +107,36 @@ h2::after {
     position: inherit;
     justify-self: end;
     align-self: center;
+    animation: slide-left s forwards ;
+   /* padding: 0;
+    margin: 0; */
+}
+@keyframes slide-left {
+    from {
+        left: 0; /* Startposition */
+    }
+    to {
+        left: 100vw; /* Endposition (20vw nach links) */
+    }
 }
 
 #chillidatitle {
     writing-mode: vertical-lr;
-    transform: translate( -90px, 0px);
+    transform: translate(-90px, 0px);
     position: inherit;
-    justify-self: center;
+    justify-self: end;
     align-self: center;
 }
 
 .redpart {
     background-color: rgb(159, 64, 55);
-    animation: expand-contract 3s infinite;
-    animation-delay: 10s;
-    z-index: -1;
 }
-
-@keyframes expand-contract {
-    0%, 100% {
-      transform: scaleY(1);
-    }
-    50% {
-      transform: scaleY(1.2);
-    }
-  }
 
 .information {
     transform: translate(0, 300px);
 }
 
 @media (max-width: 768px) {
-    
     h1 {
         color: rgb(55, 40, 37);
         font-size: 20vw;
@@ -148,6 +146,7 @@ h2::after {
         position: inherit;
         justify-self: center;
         align-self: center;
+        animation: titlemoving 8s infinite;
     }
 
     .parentcontainer {
@@ -158,7 +157,7 @@ h2::after {
     }
 
     .rothko {
-        grid-column: 3 ;
+        grid-column: 3;
         grid-row: 2;
     }
 
@@ -168,8 +167,9 @@ h2::after {
         position:inherit ;
         justify-self: center;
         align-self: center ;
+        
     }
-
+   
     .chillida {
         grid-column: 3;
         grid-row: 4;
@@ -216,19 +216,4 @@ h2::after {
             border-right: 0 solid rgb(102, 61, 57);
         }
     }
-
-    .redpart {
-        animation: expand-contract 3s infinite;
-        animation-delay: 10s;
-        z-index: -1;
-
-    }
-    @keyframes expand-contract {
-        0%, 100% {
-          transform: scaleX(1);
-        }
-        50% {
-          transform: scaleX(1.2);
-        }
-      }
 }
