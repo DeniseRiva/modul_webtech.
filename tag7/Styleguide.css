@@ -11,7 +11,7 @@ body {
 
 h1 {
     color: rgb(55, 40, 37);
-    font-size: 25vh;
+    font-size: 20vh;
     font-family: 'Franklin Gothic Medium';
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ h1 {
 h2 {
     color: rgb(55, 40, 37);
     text-align: left;
-    transform: translate(20px,0);
+    transform: translate(20px,-10vh);
     width: 0;
     margin: 0;
     padding: 0;
@@ -29,45 +29,35 @@ h2 {
     font-family: 'Franklin Gothic Medium';
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 6s steps(40, end) forwards, blink-caret 0.5s 10 step-end;
-    position: relative;
+    animation: typing 6s steps(40, end) forwards
     
     
 }
 
 h2:nth-child(2) { 
-    animation-delay: 2s; 
+    animation-delay: 1s; 
 }
 
 h2:nth-child(3) {
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 h2:nth-child(4) {
-    animation-delay: 4s;
+    animation-delay: 3s;
 }
 
 h2:nth-child(5) {
-    animation-delay: 5s;
+    animation-delay: 4s;
 }
 
 h2:nth-child(6) {
-    animation-delay: 6s;
+    animation-delay: 5s;
 }
 
 h2:nth-child(7) {
-    animation-delay: 7s;
+    animation-delay: 6s;
 }
 
-h2::after {
-    content: '';
-    display: inline-block;
-    border-right: 2px rgb(102, 61, 57);
-    height: 30px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
 
 @keyframes typing {
     from {
@@ -76,21 +66,6 @@ h2::after {
 
     to {
         width: 80%;
-    }
-}
-
-@keyframes blink-caret {
-    from,
-    to {
-        border-right: 2px solid #56120800;
-    }
-
-    50% {
-        border-right: 2px solid #561208;
-    }
-
-    100% {
-        border-right: 0 solid rgb(102, 61, 57);
     }
 }
 
@@ -112,15 +87,16 @@ h2::after {
 #chillidatitle {
     writing-mode: vertical-lr;
     transform: translate( -90px, 0px);
-    position: inherit;
+    position: inherit; 
     justify-self: center;
     align-self: center;
+    text-align: center;
 }
 
 .redpart {
     background-color: rgb(159, 64, 55);
     animation: expand-contract 3s infinite;
-    animation-delay: 10s;
+    animation-delay: 7s;
     z-index: -1;
 }
 
@@ -177,15 +153,13 @@ h2::after {
 
     #chillidatitle {
         writing-mode: horizontal-tb;
-        transform: translate(0, 0vh); 
+        transform: translate(0, -5vh);
         position:inherit ;
-        align-self: center ;
-        justify-self: center;
-       
+        align-items:center ;
     }
 
     h2 {
-        transform: translate(40px, -170px);
+        transform: translate(40px, -150px);
         overflow: hidden;
         white-space: nowrap;
         width: 0;
@@ -219,7 +193,7 @@ h2::after {
 
     .redpart {
         animation: expand-contract 3s infinite;
-        animation-delay: 10s;
+        animation-delay: 7s;
         z-index: -1;
 
     }
